@@ -1,27 +1,51 @@
-# Langchain Core
+# ============================
+# LangChain Core
+# ============================
 langchain
 langchain-core
 
-# OpenAI Integration
+# ============================
+# OpenAI
+# ============================
 openai
 langchain-openai
 
-# Anthropic Integration
+# ============================
+# Anthropic
+# ============================
 langchain-anthropic
 
-# Google Gemini(PalM) Integration
+# ============================
+# Google Gemini
+# ============================
 langchain-google-genai
 google-generativeai
 
-# Hugging Face Integration
+# ============================
+# Hugging Face
+# ============================
 transformers
+torch
+sentence-transformers
+accelerate
 langchain-huggingface
 huggingface-hub
 
-# Environment Variable Management
+# ============================
+# Environment Variables
+# ============================
 python-dotenv
--e .
 
-# Machine Learning Utilities
-scikit-learn
+# ============================
+# Machine Learning
+# ============================
 numpy
+scikit-learn
+pandas
+
+# ============================
+# Editable Install
+# Remove this if you don't have
+# setup.py or pyproject.toml
+# ============================
+-e .

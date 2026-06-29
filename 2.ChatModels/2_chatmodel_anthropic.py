@@ -1,4 +1,4 @@
-from lanchain_anthropic import ChatAnthropic
+from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
