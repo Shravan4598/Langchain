@@ -42,6 +42,7 @@ python-dotenv
 numpy
 scikit-learn
 pandas
+pydantic
 
 # ============================
 # Editable Install
