@@ -24,5 +24,32 @@ print(result)
 
 chain.get_graph().print_ascii() # To visualize the chain
 """
-
+These facts highlight the IPL's significance in the world of cricket and its ability to generate excitement and revenue.
+     +-------------+       
+     | PromptInput |       
+     +-------------+       
+            *              
+            *              
+            *              
+    +----------------+     
+    | PromptTemplate |     
+    +----------------+     
+            *              
+            *              
+            *              
+   +-----------------+     
+   | ChatHuggingFace |     
+   +-----------------+     
+            *              
+            *              
+            *              
+   +-----------------+     
+   | StrOutputParser |     
+   +-----------------+     
+            *              
+            *              
+            *              
++-----------------------+  
+| StrOutputParserOutput |  
++-----------------------+  
 """
