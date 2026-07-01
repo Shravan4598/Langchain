@@ -45,6 +45,11 @@ pandas
 pydantic
 
 # ============================
+# Graph Visualization
+# ============================
+grandalf
+
+# ============================
 # Editable Install
 # Remove this if you don't have
 # setup.py or pyproject.toml
