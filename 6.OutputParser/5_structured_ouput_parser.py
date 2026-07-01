@@ -31,6 +31,7 @@ chain=template|model|parser
 # prompt=template.invoke({"topic":"Black Hole"})
 
 # result=model.invoke(prompt)
+
 # final_result=parser.parse(result.content)
 # print(final_result)
 
