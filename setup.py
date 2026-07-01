@@ -5,7 +5,7 @@ def get_requirements()->List[str]:
     return  requirements_list
 
 setup(
-    name="Langchain",
+    name="my_langchain_project",
     version="0.0.1",
     author="Shravan Kumar Pandey",
     author_email="shravankumarpandey825412@gmail.com",
