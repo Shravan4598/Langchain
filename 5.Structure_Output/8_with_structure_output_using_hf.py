@@ -1,6 +1,8 @@
 """
 This code will throw error because
-Llama model does not support structured output
+Llama model cannot produce structured output by default
+so we need Ouput Parser
+
 """
 
 
