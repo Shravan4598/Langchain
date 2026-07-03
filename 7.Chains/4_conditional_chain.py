@@ -68,3 +68,42 @@ chain=classifier_chain|branch_chain
 print(chain.invoke({"feedback":"This is a beautiful smartphone"}))
 print("====="*10)
 print(chain.invoke({"feedback":"This is a  terrible smartphone"}))
+
+chain.get_graph().print_ascii()
+
+"""
+  +-------------+      
+      | PromptInput |      
+      +-------------+      
+             *             
+             *             
+             *             
+    +----------------+     
+    | PromptTemplate |     
+    +----------------+     
+             *             
+             *             
+             *             
++------------------------+ 
+| ChatGoogleGenerativeAI | 
++------------------------+ 
+             *             
+             *             
+             *             
+ +----------------------+  
+ | PydanticOutputParser |  
+ +----------------------+  
+             *             
+             *             
+             *             
+        +--------+         
+        | Branch |         
+        +--------+         
+             *             
+             *             
+             *             
+     +--------------+      
+     | BranchOutput |      
+     +--------------+      
+
+"""
