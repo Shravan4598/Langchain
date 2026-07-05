@@ -13,7 +13,7 @@ prompt1=PromptTemplate(
 )
 
 prompt2=PromptTemplate(
-    template="Exaplin the following joke:\n {text}",
+    template="Explain the following joke:\n{text}",
     input_variables=["text"]
 )
 
