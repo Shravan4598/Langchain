@@ -51,6 +51,7 @@ pydantic
 grandalf
 
 pypdf
+bs4
 # ============================
 # Editable Install
 # Remove this if you don't have
