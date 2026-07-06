@@ -50,6 +50,7 @@ pydantic
 # ============================
 grandalf
 
+pypdf
 # ============================
 # Editable Install
 # Remove this if you don't have
