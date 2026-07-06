@@ -34,7 +34,14 @@ text_splitter = SemanticChunker(
 )
 
 # 3. Create your text
-long_text = "Your very long document goes here. The weather in Bhilai is hot today. But the monsoon season brings rain. AI models are very smart. They learn from data."
+# long_text = "Your very long document goes here. The weather in Bhilai is hot today. But the monsoon season brings rain. AI models are very smart. They learn from data."
+
+long_text = """
+Farmers were working hard in the fields, preparing the soil and planting seeds for the next season. The sun was bright, and the air smelled of earth and fresh grass. The Indian Premier League (IPL) is the biggest cricket league in the world. People all over the world watch the matches and cheer for their favourite teams.
+
+
+Terrorism is a big danger to peace and safety. It causes harm to people and creates fear in cities and villages. When such attacks happen, they leave behind pain and sadness. To fight terrorism, we need strong laws, alert security forces, and support from people who care about peace and safety.
+"""
 
 # 4. Split the text into meaningful chunks
 chunks = text_splitter.create_documents([long_text])
@@ -42,3 +49,13 @@ chunks = text_splitter.create_documents([long_text])
 # 5. Print the results
 for i, chunk in enumerate(chunks):
     print(f"Chunk {i+1}: {chunk.page_content}")
+
+
+# Output
+"""
+Chunk 1: 
+Farmers were working hard in the fields, preparing the soil and planting seeds for the next season.
+
+Chunk 2: The sun was bright, and the air smelled of earth and fresh grass. The Indian Premier League (IPL) is the biggest cricket league in the world. People all over the world watch the matches and cheer for their favourite teams. Terrorism is a big danger to peace and safety. It causes harm to people and creates fear in cities and villages. When such attacks happen, they leave behind pain and sadness. To fight terrorism, we need strong laws, alert security forces, and support from people who care about peace and safety.
+"""
+# It is not correct
