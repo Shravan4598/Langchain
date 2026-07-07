@@ -38,6 +38,15 @@ for i,doc in enumerate(result):
     print("Content:",doc.page_content)
 
 # lambda_mult=0.5
+"""
+retriever=vector_store.as_retriever(
+    search_type="mmr",
+    search_kwargs={
+        "k":3,
+        "lambda_mult":0.5
+    }
+)
+"""
 
 """
 ======================================== Result 1 ==============================
@@ -49,6 +58,15 @@ Content: Embeddings are vector representations of text.
 """
 
 # lambda_mult=1
+"""
+retriever=vector_store.as_retriever(
+    search_type="mmr",
+    search_kwargs={
+        "k":3,
+        "lambda_mult":1
+    }
+)
+"""
 """
 ======================================== Result 1 ==============================
 Content: LangChain supports Chroma, FAISS, Pinecone, and more.
