@@ -55,6 +55,7 @@ grandalf
 pypdf
 bs4
 wikipedia
+faiss-cpu
 # ============================
 # Editable Install
 # Remove this if you don't have
