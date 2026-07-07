@@ -31,4 +31,26 @@ result=retriever.invoke(query)
 
 for i,doc in enumerate(result):
     print("==="*5,"Result",i+1,"==="*5)
-    print("Content: ",do)
+    print("Content: ",doc.page_content)
+
+# Output
+"""
+=============== Result 1 ===============
+Content:  Chroma is a vector database optimized for LLM-based search.
+=============== Result 2 ===============
+Content:  LangChain helps developers build LLM applications easily.
+"""
+
+print("========"*5)
+results=vector_store.similarity_search(query,2)
+for i,doc in enumerate(results):
+    print("==="*5,"Result",i+1,"==="*5)
+    print("Content: ",doc.page_content)
+
+# Output
+"""
+=============== Result 1 ===============
+Content:  Chroma is a vector database optimized for LLM-based search.
+=============== Result 2 ===============
+Content:  LangChain helps developers build LLM applications easily.
+"""
