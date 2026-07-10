@@ -19,3 +19,12 @@ result=llm_with_bind_tools.invoke(
 print(result)
 print(result.content)
 print(result.tool_calls)
+
+"""
+[{'name': 'multiply', 'args': {'a': 5, 'b': 3}, 'id': '14df6836-d264-4239-a87d-d273267f907d', 'type': 'tool_call'}]
+"""
+
+# It can only suugest you the tool but do not execute it
+
+print("Suggest Tool for this task")
+print(result.tool_calls)

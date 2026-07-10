@@ -23,7 +23,7 @@ langchain-anthropic
 # ============================
 langchain-google-genai
 google-generativeai
-
+langchain-google-community
 # ============================
 # Hugging Face
 # ============================
@@ -58,6 +58,7 @@ wikipedia
 faiss-cpu
 duckduckgo-search
 ddgs
+google-api-python-client
 # ============================
 # Editable Install
 # Remove this if you don't have
