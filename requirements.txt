@@ -6,6 +6,7 @@ langchain-core
 langchain-community
 langchain-experimental
 langchain-chroma
+langchain-classic
 
 # ============================
 # OpenAI
