@@ -89,30 +89,131 @@ flowchart TD
 ## 📂 Folder Structure
 
 ```
-Langchain/
-├── 01.LLMs/                    # Raw LLM invocation examples
-├── 02.ChatModels/               # Chat models: OpenAI, Anthropic, Google, HF (API & local)
-├── 03.EmbeddingModels/          # OpenAI & HF embeddings, document similarity
-├── 04.Prompt/                   # Static/dynamic prompts, chat templates, simple chatbot
-├── 05.Structure_Output/         # TypedDict, Pydantic, JSON Schema structured output
-├── 06.OutputParser/             # String, JSON, structured, Pydantic output parsers
-├── 07.Chains/                   # Simple, sequential, parallel, conditional chains
-├── 08.Runnables/                # LCEL runnables, LLMChain, PDF reader, RetrievalQA
-├── 09.RAG/                      # Full RAG pipeline
-│   ├── 1.Document_Loader/       # Text, PDF, directory, web page loaders
-│   ├── 2.Text_Splitter/         # Length/structure/markdown/semantic splitters
-│   ├── 3.Vector_Database/       # ChromaDB vector store examples
-│   ├── 4.Retriever/             # Wikipedia, vector store, MMR, MQR, CCR retrievers
-│   └── Book/                    # Sample PDFs used for RAG demos
-├── 10.Tools/                    # Built-in tools, custom tools, toolkits
-│   ├── Built-in_Tool/           # DuckDuckGo, shell, Google search tools
-│   ├── Custom_Tool/              # Structured tool, base tool examples
-│   └── Toolkit/                  # Toolkit creation, binding, execution
-├── 11.Agents/                   # Search agent, weather agent
-├── chroma_db/                    # Persisted Chroma vector store (generated at runtime)
-├── requirements.txt              # Python dependencies
-├── setup.py                      # Package setup script
-└── README.md
+```
+Langchain.git/
+├── .gitignore
+├── 01.LLMs/
+│   ├── 1_LLM_demo.py
+│   └── __init__.py
+├── 02.ChatModels/
+│   ├── 1_chatmodel_openai.py
+│   ├── 2_chatmodel_anthropic.py
+│   ├── 3_chatmodels_google.py
+│   ├── 4_chatmodels_hf_api.py
+│   ├── 5_chatmodels_hf_local.py
+│   └── __init__.py
+├── 03.EmbeddingModels/
+│   ├── 1_embedding_openai_query.py
+│   ├── 2_embedding_openai_docs.py
+│   ├── 3_embedding_hf_local.py
+│   ├── 4_Document_Similarity.py
+│   └── __init__.py
+├── 04.Prompt/
+│   ├── 1_Static_Prompt.py
+│   ├── 2_Dynamic_Prompt.py
+│   ├── 3_Chatbot.py
+│   ├── 4_Messages.py
+│   ├── 5_Chat_Template.py
+│   ├── 6_Message_Placeholder.py
+│   └── chat_history.txt
+├── 05.Structure_Output/
+│   ├── 1_using_TypeDict.py
+│   ├── 2_with_structured_output_TypeDictAnnoted.py
+│   ├── 3_Pydantic.py
+│   ├── 4_Pydantic.py
+│   ├── 5_with_structured_output_TypeDict.py
+│   ├── 6_with_structured_output_Pydantic.py
+│   ├── 7_with_structured_output_JsonScheme.py
+│   ├── 8_with_structure_output_using_hf.py
+│   └── json_schema.json
+├── 06.OutputParser/
+│   ├── 1_string_output_parser.py
+│   ├── 2_string_output_parser.py
+│   ├── 3_json_output_parser.py
+│   ├── 4_json_output_parser_with_chain.py
+│   ├── 5_structured_ouput_parser.py
+│   └── 6_pydantic_output_parser.py
+├── 07.Chains/
+│   ├── 1_simple_chain.py
+│   ├── 2_sequential_chain.py
+│   ├── 3_parallel_chain.py
+│   └── 4_conditional_chain.py
+├── 08.Runnables/
+│   ├── 1.1_runnable_sequence.py
+│   ├── 1_runnable_sequence.py
+│   ├── 2_runnable_parallel.py
+│   ├── 3.1_simple_runnable_passthrough.py
+│   ├── 3.2_runnable_passthrough.py
+│   ├── 4.1_simple_runnable_lambda.py
+│   ├── 4.2_runnable_lambda.py
+│   ├── 5_runnable_branch.py
+│   ├── 6_LCEL.py
+│   ├── llm_using_llmchain.py
+│   ├── pdf_reader.py
+│   ├── retrievalQA_chain.py
+│   └── simple_llm.py
+├── 09.RAG/
+│   ├── 1.Document_Loader/
+│   │   ├── 1_text_loader.py
+│   │   ├── 2_pdf_loader.py
+│   │   ├── 3.1_directory_loader_load.py
+│   │   ├── 3.2_directory_loader_lazyload.py
+│   │   ├── 4.1_WebPage_loader.py
+│   │   ├── 4.2_WebPage_loader_application.py
+│   │   ├── cricket.txt
+│   │   └── pypdf.pdf
+│   ├── 2.Text_Splitter/
+│   │   ├── 1.1_length_based_text_splitter.py
+│   │   ├── 1_length_based_text_splitter.py
+│   │   ├── 2_text_structure_based_text_splitter.py
+│   │   ├── 3.1_markdown_splitter_using_text_splitter.py
+│   │   ├── 3_document_structure_based_text_splitter.py
+│   │   └── 4_semantic_meaning_based_text_splitter.py
+│   ├── 3.Vector_Database/
+│   │   ├── 1_chromadb_vector_db.py
+│   │   └── 2_chromadb-using-vector-database.ipynb
+│   ├── 4.Retriever/
+│   │   ├── 1_wikipedia_retriever.py
+│   │   ├── 2_vector_store_retriever.py
+│   │   ├── 3_MMR_retriever.py
+│   │   ├── 4_mqr.py
+│   │   └── 5_ccr.py
+│   ├── Book/
+│   │   ├── 1.pdf
+│   │   ├── SDG_AI-Study-Assistant_Shravan-Kumar-Pandey.pdf
+│   │   └── aknowledgement6th sem.pdf
+│   ├── __ini__.py
+│   └── dl-curriculum.pdf
+├── 10.Tools/
+│   ├── Built-in_Tool/
+│   │   ├── 1_duckduckgo_search.py
+│   │   ├── 2_shell_tool.py
+│   │   └── 3_google_search.py
+│   ├── Custom_Tool/
+│   │   ├── 1_custom-tool.ipynb
+│   │   ├── 2_structured_tool.py
+│   │   └── 3_Base_tool.py
+│   ├── Toolkit/
+│   │   ├── 1_toolkit.py
+│   │   ├── 2_tool_binding.py
+│   │   ├── 3_tool_execution.py
+│   │   └── 4_complete_toolkit_code.py
+│   └── __init__.py
+├── 11.Agents/
+│   ├── 1_search_agents_in_langchain.py
+│   └── 2_weather_agent_langchain.py
+├── README.md
+├── chroma_db/
+│   ├── 710c71c9-f247-4be4-a4cb-ddd48b7c3de1/
+│   │   ├── data_level0.bin
+│   │   ├── header.bin
+│   │   ├── length.bin
+│   │   └── link_lists.bin
+│   └── chroma.sqlite3
+├── requirements.txt
+└── setup.py
+
+```
 ```
 
 ---
